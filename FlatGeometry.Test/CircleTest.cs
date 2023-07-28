@@ -5,7 +5,7 @@ using FlatGeometry.Service;
 using Xunit;
 using Xunit.Abstractions;
 
-namespace FlatGeometryTest
+namespace FlatGeometry.Test
 {
     public class CircleTest
     {

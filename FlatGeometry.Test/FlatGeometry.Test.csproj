@@ -8,8 +8,8 @@
         <ProjectTypeGuids>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
         <OutputType>Library</OutputType>
         <AppDesignerFolder>Properties</AppDesignerFolder>
-        <RootNamespace>FlatGeometryTest</RootNamespace>
-        <AssemblyName>FlatGeometryTest</AssemblyName>
+        <RootNamespace>FlatGeometry.Test</RootNamespace>
+        <AssemblyName>FlatGeometry.Test</AssemblyName>
         <TargetFrameworkVersion>v4.8.1</TargetFrameworkVersion>
         <FileAlignment>512</FileAlignment>
     </PropertyGroup>
@@ -60,6 +60,9 @@
         <Project>{5ed1ff40-57c0-4869-88da-db0f9415bf2c}</Project>
         <Name>FlatGeometry</Name>
       </ProjectReference>
+    </ItemGroup>
+    <ItemGroup>
+      <Folder Include="Types\" />
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
     <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

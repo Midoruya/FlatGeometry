@@ -2,7 +2,7 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlatGeometry", "FlatGeometry.csproj", "{5ED1FF40-57C0-4869-88DA-DB0F9415BF2C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlatGeometryTest", "FlatGeometryTest\FlatGeometryTest.csproj", "{5406859E-6E96-4CA7-9441-B031F6B7405A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlatGeometry.Test", "FlatGeometry.Test\FlatGeometry.Test.csproj", "{5406859E-6E96-4CA7-9441-B031F6B7405A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
