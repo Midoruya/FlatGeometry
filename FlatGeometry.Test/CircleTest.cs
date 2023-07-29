@@ -45,9 +45,9 @@ namespace FlatGeometry.Test
             Assert.Equal((int)(area * 10000), (int)(resultArea * 10000));
         }
         
-        public static IEnumerable<Object[]> CircleData(bool isExeption = false)
+        public static IEnumerable<Object[]> CircleData(bool isException = false)
         {
-            if (isExeption)
+            if (isException)
             {
                 yield return new object[] { -1.5, null, null };
                 yield return new object[] { -1, null, null };
