@@ -17,7 +17,7 @@ namespace FlatGeometry.Test
         }
 
         [Theory]
-        [MemberData(nameof(CircleData))]
+        [MemberData(nameof(CircleData), parameters: true)]
         public void Error_init_circle(double radius, double resultPerimeter, double resultArea)
         {
             if (radius > 0)
@@ -26,7 +26,7 @@ namespace FlatGeometry.Test
         }
 
         [Theory]
-        [MemberData(nameof(CircleData))]
+        [MemberData(nameof(CircleData), parameters: false)]
         public void Correct_perimeter_calculations(double radius, double resultPerimeter, double resultArea)
         {
             if (radius <= 0)
@@ -36,7 +36,7 @@ namespace FlatGeometry.Test
         }
 
         [Theory]
-        [MemberData(nameof(CircleData))]
+        [MemberData(nameof(CircleData), parameters: false)]
         public void Correct_area_calculation(double radius, double resultPerimeter, double resultArea)
         {
             if (radius <= 0)
@@ -45,13 +45,17 @@ namespace FlatGeometry.Test
             Assert.Equal((int)(area * 10000), (int)(resultArea * 10000));
         }
         
-        public static IEnumerable<Object[]> CircleData()
+        public static IEnumerable<Object[]> CircleData(bool isExeption = false)
         {
-            yield return new object[] { -1.5, null, null };
-            yield return new object[] { -1, null, null };
-            yield return new object[] { -0.8, null, null };
-            yield return new object[] { -0.2, null, null };
-            yield return new object[] { 0, null, null };
+            if (isExeption)
+            {
+                yield return new object[] { -1.5, null, null };
+                yield return new object[] { -1, null, null };
+                yield return new object[] { -0.8, null, null };
+                yield return new object[] { -0.2, null, null };
+                yield return new object[] { 0, null, null };
+                yield break;
+            }
             yield return new object[] { 0.2, 1.25663706143592, 0.125663706143592 };
             yield return new object[] { 0.8, 5.02654824574367, 2.01061929829747 };
             yield return new object[] { 1, 6.28318530717959, 3.14159265358979 };
