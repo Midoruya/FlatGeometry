@@ -45,6 +45,7 @@ namespace FlatGeometry.Test
         {
             Triangle triangle = new Triangle(side);
             Assert.Equal(triangle.GetTriangleType(), type);
+            Assert.Equal(triangle.Type, type);
         }
         
         public static IEnumerable<Object[]> TriangleData()
@@ -54,6 +55,7 @@ namespace FlatGeometry.Test
         }
         public static IEnumerable<Object[]> TriangleNotInitData()
         {
+            yield return new object[] { new List<double> { -1, 0, 0, 4 } };
             yield return new object[] { new List<double> { -1, 0, 0 } };
             yield return new object[] { new List<double> { -0.8, 0, 0 } };
             yield return new object[] { new List<double> { -0.2, 0, 0 } };
